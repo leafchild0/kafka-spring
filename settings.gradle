@@ -1,0 +1,4 @@
+include 'spring-kafka'
+include 'subscriber-web'
+include 'subscriber-db'
+
