@@ -1,4 +1,4 @@
-include 'spring-kafka'
+include 'kafka-publisher'
 include 'subscriber-web'
 include 'subscriber-db'
 

@@ -18,7 +18,7 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.2.71'
 }
 
-group 'com.leafchild0.spring-db'
+group 'com.leafchild0.spring-kafka'
 version '1.0'
 
 sourceCompatibility = 1.8

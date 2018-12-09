@@ -11,7 +11,7 @@ plugins {
     id 'java'
 }
 
-group 'com.leafchild0.rabbitmq'
+group 'com.leafchild0.spring-kafka'
 version '1.0'
 
 sourceCompatibility = 1.8
