@@ -1,12 +1,13 @@
 package com.leafchild0.kafka;
 
+import java.util.UUID;
+import java.util.concurrent.ExecutionException;
+
 import org.apache.kafka.clients.producer.RecordMetadata;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Component;
-
-import java.util.concurrent.ExecutionException;
 
 /**
  * @author victor
@@ -23,7 +24,7 @@ public class MessageSender {
 
 		try {
 
-			SendResult<String, String> result = producer.send("spring-kafka", message).get();
+			SendResult<String, String> result = producer.sendDefault(message).get();
 			RecordMetadata recordMetadata = result.getRecordMetadata();
 			System.out.println(String.format("topic = %s, partition = %s, offset = %s, message = %s",
 					recordMetadata.topic(), recordMetadata.partition(), recordMetadata.offset(), message));

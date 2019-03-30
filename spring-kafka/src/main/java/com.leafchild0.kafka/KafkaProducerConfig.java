@@ -35,6 +35,7 @@ public class KafkaProducerConfig {
 		props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA_SERVER);
 		props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
 		props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+		props.put(ProducerConfig.MAX_BLOCK_MS_CONFIG, "100000");
 
 		return props;
 	}

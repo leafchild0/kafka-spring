@@ -12,16 +12,17 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouterLayout;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 /**
  * @author victor
  * @date 10/25/18
  */
-@Route(value = "")
 @HtmlImport("frontend://styles/shared-styles.html")
 @PageTitle("Kafka Main Layout")
 @Tag("kafka-main-layout")
 @Push
+@Route(value = "")
 public class KafkaMainLayout extends Div implements RouterLayout {
 
 	@Autowired private MessageSender sender;

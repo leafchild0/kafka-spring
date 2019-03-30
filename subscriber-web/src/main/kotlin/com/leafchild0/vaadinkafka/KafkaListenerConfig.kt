@@ -18,7 +18,6 @@ class KafkaListenerConfig {
 	@Bean
 	fun kafkaListenerContainerFactory(): ConcurrentKafkaListenerContainerFactory<String, String> {
 		val factory = ConcurrentKafkaListenerContainerFactory<String, String>()
-		factory.setConcurrency(1)
 		factory.consumerFactory = consumerFactory()
 		return factory
 	}
@@ -48,6 +47,6 @@ class KafkaListenerConfig {
 
 	companion object {
 		private const val KAFKA_SERVER = "localhost:9092"
-		internal const val GROUP_ID = "spring-kafka"
+		internal const val GROUP_ID = "spring-kafka-web"
 	}
 }
